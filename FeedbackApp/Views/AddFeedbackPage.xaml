@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FeedbackApp.AddFeedbackPage"
+    Title="Add Feedback">
+    <ContentPage.Content>
+        <StackLayout
+        Margin="30"
+            Spacing="30"
+            >
+            <Label
+            Text="{StaticResource feedback}"
+                Style="{StaticResource labelStyle}"
+                Font="24"
+                TextColor="{StaticResource ThemeColor}"
+            />
+            <Entry
+                Style="{StaticResource entryStyle}"
+            Placeholder="{StaticResource namePlaceholder}"
+                Text="{Binding Feedback.Name}"
+            />
+             <Entry
+                Style="{StaticResource entryStyle}"
+            Placeholder="{StaticResource numberPlaceholder}"
+                Text="{Binding Feedback.ContactNumber}"
+                Keyboard="Telephone"
+                MaxLength="10"
+            />
+             <Editor
+                Style="{StaticResource entryStyle}"
+            Placeholder="{StaticResource descriptionPlaceholder}"
+                Text="{Binding Feedback.Description}"
+                MaxLength="254"
+                PlaceholderColor="Silver"
+            />
+             <Entry
+                Style="{StaticResource entryStyle}"
+            Placeholder="{StaticResource ratingPlaceholder}"
+                Text="{Binding Feedback.Rating}"
+                Keyboard="Telephone"
+                MaxLength="1"
+            />
+             <Button
+        Text="{StaticResource add}"
+           Style="{StaticResource buttonStyle}"
+            Command="{Binding AddCommand}"
+           />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

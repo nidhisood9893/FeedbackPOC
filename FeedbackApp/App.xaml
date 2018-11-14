@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    xmlns ="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FeedbackApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--global colors-->
+            <Color x:Key="ThemeColor">#EC781A</Color>
+            <Color x:Key="BackgroundColor"></Color>
+            <Color x:Key="TextColor">White</Color>
+
+       <!-- global strings-->
+            <x:String x:Key="appName">Feedback App Poc</x:String>
+            
+        <x:String x:Key="proceed">Proceed</x:String>
+          <x:String x:Key="add">Add</x:String>
+         <x:String x:Key="show">Show</x:String>
+          <x:String x:Key="namePlaceholder">Name</x:String>
+            <x:String x:Key="numberPlaceholder">Contact Number</x:String>
+            <x:String x:Key="descriptionPlaceholder">Description</x:String>
+            <x:String x:Key="ratingPlaceholder">Provide Rating</x:String>
+            <x:String x:Key="feedback">Provide your valuable Feedback</x:String>
+            <x:String x:Key="nameAlert">Please enter name!</x:String>
+            <x:String x:Key="numberAlert">Please enter contact number!</x:String>
+            <x:String x:Key="descriptionAlert">Please enter description!</x:String>
+            <x:String x:Key="rateAlert">Please provide rating!</x:String>
+            
+            <!--global styles-->
+            
+            <Style x:Key="buttonStyle" TargetType="Button">
+               <Setter Property="CornerRadius" Value="5"  />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemeColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="Padding" Value="30,0"></Setter>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            
+            <Style x:Key="labelStyle" TargetType="Label">
+               <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+               </Style>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+               <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="HeightRequest" Value="35" />
+               </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
